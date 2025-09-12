@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1d4350, #a43931);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background: rgba(255,255,255,0.8);
+            color: #333;
+        }
+
+        input[type="text"]::placeholder {
+            color: #555;
+        }
+
+        button {
+            padding: 12px;
+            margin-top: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(90deg, #ee0979, #ff6a00);
+        }
+
+        h2 {
+            margin-top: 25px;
+            font-size: 1.8rem;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>🔥 Algerian Forest Fire Prediction 🔥</h1>
+
+    <!-- Main Input Form -->
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+        <input type="text" name="Temperature" placeholder="🌡️ Temperature (22–42 °C)" required="required" />
+        <input type="text" name="RH" placeholder="💧 Relative Humidity (21–90 %)" required="required" />
+        <input type="text" name="Ws" placeholder="🌬️ Wind Speed (6–29 km/h)" required="required" />
+        <input type="text" name="Rain" placeholder="☔ Rainfall (0–16.8 mm)" required="required" />
+        <input type="text" name="FFMC" placeholder="🔥 Fine Fuel Moisture Code (FFMC Index) (28.6–92.5)" required="required" />
+        <input type="text" name="DMC" placeholder="🔥 Duff Moisture Code (DMC) (1.1–65.9)" required="required" />
+        <input type="text" name="DC" placeholder="🔥 Drought Code (DC) (7–220.4)" required="required" />
+        <input type="text" name="ISI" placeholder="⚡ Initial Spread Index (ISI) (0–18.5)" required="required" />        
+        <input type="text" name="Classes" placeholder="⚡Not fire= 0 , fire =1" required="required" /><br>
+         <input type="text" name="Region" placeholder="⚡Bejaia Region=0 , Sidi-Bel Abbes Region= 1" required="required" /><br>
+
+        <button type="submit">🚀 Predict FWI</button>
+    </form>
+
+    {% if results is not none%}
+    <h2>📊 The 🔥 Fire Weather Index (FWI) prediction is: <strong>{{ results }}</strong></h2>
+    {% endif %}
+</body>
+</html>
