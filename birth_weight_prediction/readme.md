@@ -7,7 +7,7 @@
     👶 Birth Weight Prediction
   </h1>
   <p style="text-align:center; font-size:1.1em; color:#555;">
-    Part of the <strong>MY_ML_PROJECTS</strong> collection by BIKRANT-RAWAT — Predicting newborn birth weight based on maternal, health & demographic factors.
+    Part of the <strong>MY_ML_PROJECTS</strong> collection by BIKRANT-RAWAT — Predicting newborn birth weight based on maternal factors, health & habits.
   </p>
 
   <hr style="border:1px solid #ccc; margin:25px 0;">
@@ -16,7 +16,7 @@
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>📖 Project Overview</h2>
     <p>
-      The aim of this project is to build a model to predict the birth weight of newborns, given features such as maternal health, demographic variables, prenatal conditions, etc.
+      The aim of this project is to build a model to predict the birth weight of newborns, given features such as maternal gestation period, smoking habit, mothers weight ,mothers height, etc.
       This helps in early risk assessment and medical planning.
     </p>
   </div>
@@ -48,9 +48,9 @@
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>🔍 Data & Features</h2>
     <ul>
-      <li>Input features may include: mother's age, height, weight, prenatal visits, medical conditions, demographic info etc.</li>
+      <li>Input features include: mother's age, height, weight, smoking condition, gestation period etc.</li>
       <li>Target variable: Birth weight (continuous).</li>
-      <li>Data cleaning: handling missing values, outliers, possibly feature scaling.</li>
+      <li>Data cleaning: handling missing values, outliers, feature scaling.</li>
     </ul>
   </div>
 
@@ -60,7 +60,7 @@
     <ul>
       <li>Exploratory Data Analysis (EDA) to understand distributions, correlations, feature importance.</li>
       <li>Feature engineering: deriving new features, handling categorical data, normalization.</li>
-      <li>Modeling: Linear Regression, Decision Trees, Random Forests, and boosting models (if applicable).</li>
+      <li>Modeling: Linear Regression, Lasso , Ridge.</li>
       <li>Evaluation: metrics like Mean Absolute Error (MAE), Mean Squared Error (MSE), R² score.</li>
       <li>Cross-validation to ensure model generalizability.</li>
     </ul>
@@ -72,10 +72,10 @@
     <pre style="background:#2c2f33; color:#f8f8f2; padding:15px; border-radius:8px; overflow:auto;">
 birth_weight_prediction/
 │
-├── data/                  # Raw & cleaned data files
-├── notebooks/             # Jupyter notebooks for exploration & prototyping
-├── models/                # Saved model artifacts
-├── src/                   # Scripts for preprocessing, training & evaluation
+├── templates/             # flask file
+├── images/                # contains images
+├── model.ipynb            # Main EDA and Model training
+├── model.pkl              # pickle file 
 ├── README.md              # This project readme
 └── requirements.txt       # Dependencies listing
     </pre>
@@ -89,7 +89,7 @@ birth_weight_prediction/
       <li>Pandas, NumPy — data manipulation & handling missing data</li>
       <li>Matplotlib, Seaborn — data visualization</li>
       <li>Scikit-Learn — machine learning models</li>
-      <li>Possibly XGBoost / RandomForest for performance boost</li>
+      <li>MSE, MAE,R2score</li>
       <li>Jupyter Notebook for experimentation</li>
     </ul>
   </div>
@@ -115,19 +115,28 @@ birth_weight_prediction/
     </ol>
   </div>
 
-  <!-- Results & Insights -->
+ 
+  
+
+    <!-- Results & Insights -->
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>📊 Results & Insights</h2>
-    <p>
-      (Include here model performance metrics like MAE, MSE, R², plus important feature contributions, any observed trends or surprises.)
-    </p>
+    <h3>📊 EDA Plots</h3>
+<p align="center">
+  <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/birth_weight_prediction/images/birthweight%20mothersweight.png" alt="bw weight" width="350">
+  <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/birth_weight_prediction/images/birthweight%20gestation.png" alt="bg weight" width="350">
+  <li> Mothers weight ranging 100 to 160 pound gives birth to babies ranging 100 to 140 ounces. </li>
+  <li>Mothers gestation period ranging in 280 to 300 days mostly produce healthy babies.</li>
+</p>
+
   </div>
+
 
   <!-- Acknowledgement -->
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>🙏 Acknowledgement</h2>
     <p>
-      I am grateful for the guidance and teaching from the MY_ML_PROJECTS community and all learning resources I referenced.  
+      I am grateful for the guidance and teaching by mentor Noorain sir and all learning resources I referenced.  
       Thanks to dataset sources, documentation, tutorials, and open-source tools that made this project possible.
     </p>
   </div>
