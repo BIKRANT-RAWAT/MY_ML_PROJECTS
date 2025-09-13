@@ -21,6 +21,18 @@
     </p>
   </div>
 
+   <!-- Project looks -->
+  <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
+    <h2>💡 Project looks</h2>
+    <ul>
+      <h3>🔥 Index page </h3>
+<img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/index_img.jpg" alt="Index page" width="500">
+      <h3>🔥 Predict_datapoint page</h3>
+<img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/predic_page.jpg" alt="prediction page" width="500">
+      
+   
+  </div>
+
   <!-- Why This Project Matters -->
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>💡 Why It Matters</h2>
@@ -47,7 +59,7 @@
     <ul>
       <li>Exploratory Data Analysis to understand distributions, correlations and outliers.</li>
       <li>Feature engineering (e.g. seasonal encoding, categorical features, scaling).</li>
-      <li>Try multiple models — e.g., Random Forest, Gradient Boosting, etc.</li>
+      <li>Try multiple models — e.g., Rigde,Lasso etc.</li>
       <li>Model evaluation using metrics like RMSE, MAE, or classification metrics if framed as classification problem.</li>
       <li>Cross-validation to ensure generalization.</li>
     </ul>
@@ -76,7 +88,7 @@ Algerian_forest_fire_prediction/
       <li>Pandas, NumPy – data manipulation</li>
       <li>Matplotlib, Seaborn – visualization</li>
       <li>Scikit-Learn – machine learning models</li>
-      <li>Possibly XGBoost / LightGBM for boosting (if used)</li>
+      <li>flask for web framework</li>
       <li>Jupyter Notebook for prototyping</li>
     </ul>
   </div>
@@ -94,23 +106,37 @@ Algerian_forest_fire_prediction/
       <li>Install dependencies:  
         <pre style="background:#272822; color:#f8f8f2; padding:10px; border-radius:6px; overflow:auto;">pip install -r requirements.txt</pre>
       </li>
-      <li>Run the notebook or scripts to reproduce data cleaning, training, and evaluation results.</li>
+      <li>Run :
+         <pre style="background:#272822; color:#f8f8f2; padding:10px; border-radius:6px; overflow:auto;">python application.py</pre>
+      </li>
+      <li>click on ctrl + local host link to predict on local host.</li>
+      <li>Deployment can be done as require.</li>
     </ol>
   </div>
 
   <!-- Results & Insights -->
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>📊 Results & Insights</h2>
-    <p>
-      
-    </p>
+    <h3>📊 EDA Plots</h3>
+<p align="center">
+  <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/Histplot.png" alt="Histogram" width="350">
+  <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/fire%20or%20not%20fire.png" alt="fire or not fire" width="350">
+   <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/sidi%20bel%20region.png" alt="Sidi bel region" width="350">
+   <img src="https://github.com/BIKRANT-RAWAT/MY_ML_PROJECTS/blob/master/Algerian_forest_fire_prediction/images/Bejaia%20region.png" alt="Bejaia region" width="350">
+<li>Its observed that August and September had the most number of forest fires for both regions. And from the above plot of months, we can understand few things
+
+Most of the fires happened in August and very high Fires happened in only 3 months - June, July and August.
+
+Less Fires was on September</li>
+</p>
+
   </div>
 
   <!-- Acknowledgement -->
   <div style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:25px;">
     <h2>🙏 Acknowledgement</h2>
     <p>
-      Special thanks to the instructors and data science community for inspiring resources and mentorship.  
+      Special thanks to the mentor Krish Naik sir and data science community for inspiring resources and mentorship.  
       Thanks to the open datasets and documentation that made this project possible.
     </p>
   </div>
